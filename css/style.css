@@ -1,53 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
 	background: #FFF;
 	font-family: Georgia, Times New Roman, Times, serif;
-	font-size: 30px;
+    font-size: 1.875rem;
 	text-align: center;
     margin: 0;
     padding: 0;
 }
 
+
+h1 h2 h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
 h1 {
-	font-size: 60px;
-	font-weight: normal;
-	margin: 0;
+	font-size: 3.75rem;
     font-family: 'Cambria Math', Georgia, serif;
     color: #000;
 	line-height: 1;
 }
 
 h2 {
-	font-size: 70px;
-	font-weight: normal;
-	margin: 0;
+	font-size: 4.375rem;
 	color: #FFB000;
     font-family: 'Cambria Math', Georgia, serif;
 	text-transform: lowercase;
 }
 
 h3 {
-	font-size: 40px;
-	font-weight: normal;
-	margin: 0;
+	font-size: 2.5rem;
     margin-top: 40px;
 	text-transform: lowercase;
 }
 
 p {
-	width: 960px;
 	margin: 40px auto;
 	color: #000;
     line-height: 200%;
 }
+
 pre {
-	width: 960px;
+    font-size: 1.125rem;
 	margin: 40px auto;
 	color: #000;
     line-height: 200%;
-	font-size: 18px;
+	
 }
 
 code {
+    font-size: 1.5rem;
     background-color: #000;
 	font-style: normal;
     border-radius: 10px;
@@ -56,12 +61,9 @@ code {
     font-family: menlo, monospace;
 }
 
-
-
-
 a, a:visited {
 	color: #000;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-decoration: none;
 }
 
@@ -77,10 +79,13 @@ ul {
 	padding: 10px;
 }
 
+.downArrow {
+    font-size: 3rem;
+    color: black;
+}
 
 blockquote {
 	text-align: left;
-	width: 720px;
 	margin: 10px auto;
 	background: #C5C3DE;
 	border: solid 2px #69697A;
@@ -90,22 +95,46 @@ blockquote {
 /*----------------------------------------  BLOCKS */
 
 .scrollblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
 	position: relative;
 	margin: 0;
-	width: 100%;
     color: white;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
 }
 
-.scrollblock h2 {
+.block-title { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+    height: 100vh;
+    background-color: #FFF; 
+    padding-bottom: 50px; 
+    
 }
-
-.block-title { background-color: #FFF; padding-bottom: 50px; }
 .block-title h2 { color: #000; }
-.block-title .meta { font-size: 16px; color: #999; }
-.block-title .meta a { font-size: 16px; color: #333; }
+
+.block-title > .meta {
+    color: #999;
+}
+
+.block-title > .meta > a { 
+    color: #333; 
+}
+
+.block-title > p {
+    font-size: 1.5rem;
+}
+
+.block-title > .meta > a {
+    font-size: 1.5rem;
+}
+
 .block-merge { background-color: #06406c; }
 .block-merge h2 { color: #FFF; }
 .block-merge p { color: #FFF; }
@@ -118,6 +147,7 @@ blockquote {
 .block-comments h3 { font-size: 16px; }
 .block-comments #disqus_thread { width: 600px; text-align: left; margin-left: auto; margin-right: auto; }
 */
+
 .announcement {
     margin-bottom: 40px;
 }
@@ -125,8 +155,6 @@ blockquote {
 .announcement img {
     border-radius: 4px;
 }
-
-
 
 
 .console-background {
@@ -139,22 +167,18 @@ blockquote {
     border-radius: 10px;
 }
 
-.console {
-/*    margin: 0px;
-    padding: 0px;
-*/}
-
 .console-text-own {
-	font-size: 30px;
+	font-size: 0.95rem;
 	color: rgb(255, 255, 255) !important;
-	line-height: 40px;
+	line-height: 2.5rem;
     color: rgb(255, 255, 255);
     font-family: Monospace;
     margin: 00px 0px 0px 10px;
 }
 .console-text-git {
-	font-size: 30px;
-	line-height: 40px;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+	
     color: rgb(180, 180, 180) !important;
     font-family: Monospace;
     margin: 00px 0px 0px 10px;
@@ -174,26 +198,19 @@ blockquote {
 
 
 .sidebyside-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 90%;
-    height: 200px;
     margin: auto;
 }
-.sidebyside-one {
-    width: 48%;
-    height: 100%;
-    float: left;
+
+.sidebyside-box {
+    width: 45%;
+    padding: 1%;
     border-radius: 10px;
-    margin-right: 1%;
-    padding-bottom: 30px;
 }
-.sidebyside-two {
-	float: left;
-    width: 48%;
-    height: 100%;
-    border-radius: 10px;
-    margin-left:1%;
-    padding-bottom: 30px;
-}
+
 .merge-highlight {
     background-color: #053356;
 }
@@ -207,4 +224,59 @@ blockquote {
 }
 .branch2 {
 	color: #57cc32;
+}
+
+/* Media query for mobile view */
+@media only screen and (max-width: 1365px) and (min-height: 1441px) {
+    .scrollblock {
+        height: 100vh;
+    }
+    
+    .block-title > h1 {
+        font-size: 5rem;
+    }
+
+    .block-title > p {
+        font-size: 2.5rem; 
+    }
+    
+    .block-title > .meta > a { 
+        font-size: 2.5rem;     
+    }
+
+    .sidebyside-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebyside-box {
+        width: 89%;
+        margin: 1%;
+
+    }
+
+    .console-text-own {
+        font-size: 1.5rem;
+    }
+
+    .downArrow {
+        font-size: 5rem;
+    }
+}
+
+/* Defining CSS Animation for downArrow */
+@keyframes example {
+    from {
+      transform: translateY(2vw);
+    } 
+    to {
+      transform: translateY(-2vw);
+    }
+  }
+
+/* Applying CSS Animation on downArrow */
+@media (prefers-reduced-motion: no-preference) {
+    .downArrow {
+        animation: example infinite 2.5s ease-in-out alternate;
+    }
 }
