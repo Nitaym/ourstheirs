@@ -219,6 +219,7 @@ ul {
 
     width: 46%;
     border-radius: 10px;
+    padding-top: 3vh;
     padding-bottom: 3vh;
 }
 
@@ -259,6 +260,7 @@ ul {
     .sidebyside-box {
         width: 86%;
         margin: 1% 0;
+        padding-top: 3vh;
         padding-bottom: 3vh;
     }
 
