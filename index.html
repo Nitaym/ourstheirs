@@ -1,155 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>git - ours vs theirs</title>
-    <link href='http://fonts.googleapis.com/css?family=Cambria+Math' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-<body>
-    <div class="scrollblock block-title">
-        <h1>git - ours & theirs</h1>
-        <p>cleaner merges for everyone </p>
-        <p class="meta">
-            by Nitay Megides<br>
-            please report issues on <a href="https://github.com/Nitaym/ourstheirs/issues">github</a>
-        </p>
-    </div>
-    <a name="merge"></a>
-    <div class="scrollblock block-merge">
-        <h2>git merge</h2>
-        <p>
-            let's merge conflicting branch <code><span class="branch2">feature</span></code> into <code><span class="branch1">master</span></code><br/>
-            <div class="console-background">
-                <div class="console">
-                    <p class="console-text-own">
-                        $ git checkout <span class="branch1">master</span> <br>
-                        $ git merge <span class="branch2">feature</span> <br>
-                    </p>
-                    <p class="console-text-git">
-                        Auto-merging Document <br>
-                        CONFLICT (content): Merge conflict in codefile.js <br>
-                        Automatic merge failed; fix conflicts and then commit the result.
-                    </p>
-                </div>
-            </div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>git - ours vs theirs</title>
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
 
-            <p>either fix the conflict manually by editing codefile.js, or use </p>
+        <!-- For font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-            <div class="sidebyside-container">
-                <div class="sidebyside-one merge-highlight">
-                    <div class="console-background">
-                        <div class="console">
-                            <p class="console-text-own">
-                                $ git checkout <span class="branch1">--ours</span> codefile.js
-                            </p>
-                        </div>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Cambria+Math' rel='stylesheet' type='text/css'>
+    </head>
+    
+    <body>
+        <div class="scrollblock block-title">
+            
+            <h1>git - ours & theirs</h1>
+            <p>cleaner merges for everyone </p>
+            <p class="meta">
+                by Nitay Megides<br>
+                please report issues on <a href="https://github.com/Nitaym/ourstheirs/issues">github</a>
+            </p>
+            <i class="downArrow fa-solid fa-arrow-down"></i>        
+            
+        </div>
+        <a name="merge"></a>
+        <div class="scrollblock block-merge">
+            <h2>git merge</h2>
+            <p>
+                let's merge conflicting branch <code><span class="branch2">feature</span></code> into <code><span class="branch1">master</span></code><br/>
+                <div class="console-background">
+                    <div class="console">
+                        <p class="console-text-own">
+                            $ git checkout <span class="branch1">master</span> <br>
+                            $ git merge <span class="branch2">feature</span> <br>
+                        </p>
+                        <p class="console-text-git">
+                            Auto-merging Document <br>
+                            CONFLICT (content): Merge conflict in codefile.js <br>
+                            Automatic merge failed; fix conflicts and then commit the result.
+                        </p>
                     </div>
-                    to select the changes done in <code><span class="branch1">master</span></code>
                 </div>
-                <div class="sidebyside-two merge-highlight">
-                    <div class="console-background">
-                        <div class="console">
-                            <p class="console-text-own">
-                                $ git checkout <span class="branch2">--theirs</span> codefile.js
-                            </p>
-                        </div>
-                    </div>
-                    to select the changes done in <code><span class="branch2">feature</span> </code>
-                </div>
-            </div>
-            <br>
-            <p> then, continue as you would normally merge</p>
-            <div class="console-background">
-                <div class="console">
-                    <p class="console-text-own">
-                        $ git add codefile.js <br>
-                        $ git merge --continue <br>
-                    </p>
-                    <p class="console-text-git">
-                        [master 5d01884] Merge branch 'feature' <br>
-                    </p>
-                </div>
-            </div>
-        </p>
 
-    </div>
-    <a name="checkout-replace"></a>
-    <div class="scrollblock block-rebase">
-        <h2>git rebase</h2>
-        <p>
-            let's rebase conflicting branch <code><span class="branch2">feature</span></code> over <code><span class="branch1">master</span></code><br/>
-            <div class="console-background">
-                <div class="console">
-                    <p class="console-text-own">
-                        $ git checkout <span class="branch2">feature</span> <br>
-                        $ git rebase <span class="branch1">master</span> <br>
-                    </p>
-                    <p class="console-text-git">
-                        First, rewinding head to replay your work on top of it... <br>
-                        Applying: a commit done in branch feature <br>
-                        error: Failed to merge in the changes. <br>
-                        ...
-                    </p>
-                </div>
-            </div>
-            <p>either fix the conflict manually by editing codefile.js, or use </p>
+                <p>either fix the conflict manually by editing codefile.js, or use </p>
 
-            <div class="sidebyside-container">
-                <div class="sidebyside-one rebase-highlight">
-                    <div class="console-background">
-                        <div class="console">
-                            <p class="console-text-own">
-                                $ git checkout <span class="branch1">--ours</span> codefile.js
-                            </p>
+                <div class="sidebyside-container">
+                    <div class="sidebyside-box merge-highlight">
+                        <div class="console-background">
+                            <div class="console">
+                                <p class="console-text-own">
+                                    $ git checkout <span class="branch1">--ours</span> codefile.js
+                                </p>
+                            </div>
                         </div>
+                        to select the changes done in <code><span class="branch1">master</span></code>
                     </div>
-                    to select the changes done in <code><span class="branch1">master</span></code>
-                </div>
-                <div class="sidebyside-two rebase-highlight">
-                    <div class="console-background">
-                        <div class="console">
-                            <p class="console-text-own">
-                                $ git checkout <span class="branch2">--theirs</span> codefile.js
-                            </p>
+                    <div class="sidebyside-box merge-highlight">
+                        <div class="console-background">
+                            <div class="console">
+                                <p class="console-text-own">
+                                    $ git checkout <span class="branch2">--theirs</span> codefile.js
+                                </p>
+                            </div>
                         </div>
+                        to select the changes done in <code><span class="branch2">feature</span> </code>
                     </div>
-                    to select the changes done in <code><span class="branch2">feature</span> </code>
                 </div>
-            </div>
-            <br>
-            <p> then, continue as you would normally do</p>
-            <div class="console-background">
-                <div class="console">
-                    <p class="console-text-own">
-                        $ git add codefile.js <br>
-                        $ git rebase --continue <br>
-                    </p>
-                    <p class="console-text-git">
-                        Applying: a commit done in branch feature <br>
-                    </p>
+                <br>
+                <p> then, continue as you would normally merge</p>
+                <div class="console-background">
+                    <div class="console">
+                        <p class="console-text-own">
+                            $ git add codefile.js <br>
+                            $ git merge --continue <br>
+                        </p>
+                        <p class="console-text-git">
+                            [master 5d01884] Merge branch 'feature' <br>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </p>
+            </p>
 
-    </div>
-<!--     <a name="hints"></a>
-    <div class="scrollblock block-hints">
-        <h2>useful hints</h2>
-        <p>
-            built-in git GUI<br />
-            <code>gitk</code><br />
-            use colorful git output<br />
-            <code>git config color.ui true</code><br />
-            show log on just one line per commit<br />
-            <code>git config format.pretty oneline</code><br />
-            use interactive adding<br />
-            <code>git add -i</code>
-        </p>
-    </div>
- -->    <a name="resources"></a>
-    <a name="comments"></a>
-</body>
+        </div>
+        <a name="checkout-replace"></a>
+        <div class="scrollblock block-rebase">
+            <h2>git rebase</h2>
+            <p>
+                let's rebase conflicting branch <code><span class="branch2">feature</span></code> over <code><span class="branch1">master</span></code><br/>
+                <div class="console-background">
+                    <div class="console">
+                        <p class="console-text-own">
+                            $ git checkout <span class="branch2">feature</span> <br>
+                            $ git rebase <span class="branch1">master</span> <br>
+                        </p>
+                        <p class="console-text-git">
+                            First, rewinding head to replay your work on top of it... <br>
+                            Applying: a commit done in branch feature <br>
+                            error: Failed to merge in the changes. <br>
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <p>either fix the conflict manually by editing codefile.js, or use </p>
+
+                <div class="sidebyside-container">
+                    <div class="sidebyside-box rebase-highlight">
+                        <div class="console-background">
+                            <div class="console">
+                                <p class="console-text-own">
+                                    $ git checkout <span class="branch1">--ours</span> codefile.js
+                                </p>
+                            </div>
+                        </div>
+                        to select the changes done in <code><span class="branch1">master</span></code>
+                    </div>
+                    <div class="sidebyside-box rebase-highlight">
+                        <div class="console-background">
+                            <div class="console">
+                                <p class="console-text-own">
+                                    $ git checkout <span class="branch2">--theirs</span> codefile.js
+                                </p>
+                            </div>
+                        </div>
+                        to select the changes done in <code><span class="branch2">feature</span> </code>
+                    </div>
+                </div>
+                <br>
+                <p> then, continue as you would normally do</p>
+                <div class="console-background">
+                    <div class="console">
+                        <p class="console-text-own">
+                            $ git add codefile.js <br>
+                            $ git rebase --continue <br>
+                        </p>
+                        <p class="console-text-git">
+                            Applying: a commit done in branch feature <br>
+                        </p>
+                    </div>
+                </div>
+            </p>
+
+        </div>
+    <!--     <a name="hints"></a>
+        <div class="scrollblock block-hints">
+            <h2>useful hints</h2>
+            <p>
+                built-in git GUI<br />
+                <code>gitk</code><br />
+                use colorful git output<br />
+                <code>git config color.ui true</code><br />
+                show log on just one line per commit<br />
+                <code>git config format.pretty oneline</code><br />
+                use interactive adding<br />
+                <code>git add -i</code>
+            </p>
+        </div>
+    -->    <a name="resources"></a>
+        <a name="comments"></a>
+    </body>
 </html>

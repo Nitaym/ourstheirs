@@ -1,67 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
 	background: #FFF;
 	font-family: Georgia, Times New Roman, Times, serif;
-	font-size: 30px;
+    font-size: 3vw;
 	text-align: center;
     margin: 0;
     padding: 0;
 }
 
+
+h1 h2 h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
 h1 {
-	font-size: 60px;
-	font-weight: normal;
-	margin: 0;
+	font-size: 3.75rem;
     font-family: 'Cambria Math', Georgia, serif;
     color: #000;
 	line-height: 1;
 }
 
 h2 {
-	font-size: 70px;
-	font-weight: normal;
-	margin: 0;
+	font-size: 6vw;
 	color: #FFB000;
     font-family: 'Cambria Math', Georgia, serif;
 	text-transform: lowercase;
 }
 
-h3 {
-	font-size: 40px;
-	font-weight: normal;
-	margin: 0;
+/* h3 {
+	font-size: 2.5rem;
     margin-top: 40px;
 	text-transform: lowercase;
-}
+} */
 
 p {
-	width: 960px;
-	margin: 40px auto;
+	margin: 1vh auto;
 	color: #000;
     line-height: 200%;
-}
-pre {
-	width: 960px;
-	margin: 40px auto;
-	color: #000;
-    line-height: 200%;
-	font-size: 18px;
 }
 
+/* pre {
+    font-size: 1.125rem;
+	margin: 2vw auto;
+	color: #000;
+    line-height: 200%;
+	
+} */
+
 code {
+    font-size: 2.5vw;
     background-color: #000;
 	font-style: normal;
-    border-radius: 10px;
+    border-radius: 1vw;
     color: white;
-    padding: 5px 15px;
+    padding: 0.5vh 1vw;
     font-family: menlo, monospace;
 }
 
-
-
-
 a, a:visited {
 	color: #000;
-    font-size: 12px;
+    font-size: 1vw;
     text-decoration: none;
 }
 
@@ -73,39 +75,67 @@ ul {
 	list-style: none;
 }
 
-.download {
+/* .download {
 	padding: 10px;
+} */
+
+.downArrow {
+    font-size: 3rem;
+    color: black;
 }
 
-
-blockquote {
+/* blockquote {
 	text-align: left;
-	width: 720px;
 	margin: 10px auto;
 	background: #C5C3DE;
 	border: solid 2px #69697A;
 	padding: 0 40px;
-}
+} */
 
 /*----------------------------------------  BLOCKS */
 
 .scrollblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
 	position: relative;
 	margin: 0;
-	width: 100%;
     color: white;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
 }
 
-.scrollblock h2 {
+.block-title { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+    height: 100vh;
+    background-color: #FFF; 
+    padding-bottom: 50px; 
+    
 }
-
-.block-title { background-color: #FFF; padding-bottom: 50px; }
 .block-title h2 { color: #000; }
-.block-title .meta { font-size: 16px; color: #999; }
-.block-title .meta a { font-size: 16px; color: #333; }
+
+.block-title > .meta {
+    color: #999;
+}
+
+.block-title > .meta > a { 
+    color: #333; 
+}
+
+.block-title > p {
+    font-size: 2vw;
+}
+
+.block-title > .meta > a {
+    font-size: 2vw;
+}
+
 .block-merge { background-color: #06406c; }
 .block-merge h2 { color: #FFF; }
 .block-merge p { color: #FFF; }
@@ -118,82 +148,81 @@ blockquote {
 .block-comments h3 { font-size: 16px; }
 .block-comments #disqus_thread { width: 600px; text-align: left; margin-left: auto; margin-right: auto; }
 */
-.announcement {
+
+/* .announcement {
     margin-bottom: 40px;
 }
 
 .announcement img {
     border-radius: 4px;
-}
-
-
-
+} */
+/* 
+.console {
+    margin: 1% 1%;
+} */
 
 .console-background {
 	max-width: 960px;
  	width: 80%;
-	margin: 40px auto;
+    padding: 2vw;
+	margin: 3vh 0;
+
 	text-align: left;
     background-color: black;
-    padding: 15px;
     border-radius: 10px;
 }
 
-.console {
-/*    margin: 0px;
-    padding: 0px;
-*/}
-
 .console-text-own {
-	font-size: 30px;
+    font-size: 1.25vw;
 	color: rgb(255, 255, 255) !important;
-	line-height: 40px;
-    color: rgb(255, 255, 255);
+	line-height: 3.5vw;
     font-family: Monospace;
-    margin: 00px 0px 0px 10px;
+    /* margin: 00px 0px 0px 10px; */
+    margin: 00px 0px 0px 1vh;
 }
+
 .console-text-git {
-	font-size: 30px;
-	line-height: 40px;
+    font-size: 2.5vw;
+    line-height: 3.3vw;
+	
     color: rgb(180, 180, 180) !important;
     font-family: Monospace;
-    margin: 00px 0px 0px 10px;
+    /* margin: 00px 0px 0px 10px; */
+    margin: 00px 0px 0px 1vw;
 }
 
-.console-textinput {
+/* .console-textinput {
     resize: none;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px 1% 1%;
     border: none;
     outline: none;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     font-family: Monospace;
-    width: calc(100% - 20px);
-    overflow: hidden;
-}
+    width: 99%;
+    overflow-wrap: normal;
+} */
 
 
 .sidebyside-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 90%;
-    height: 200px;
-    margin: auto;
 }
-.sidebyside-one {
-    width: 48%;
-    height: 100%;
-    float: left;
+
+.sidebyside-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 46%;
     border-radius: 10px;
-    margin-right: 1%;
-    padding-bottom: 30px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
-.sidebyside-two {
-	float: left;
-    width: 48%;
-    height: 100%;
-    border-radius: 10px;
-    margin-left:1%;
-    padding-bottom: 30px;
-}
+
 .merge-highlight {
     background-color: #053356;
 }
@@ -207,4 +236,56 @@ blockquote {
 }
 .branch2 {
 	color: #57cc32;
+}
+
+/* Media query for mobile view */
+@media only screen and (max-width: 1150px) {
+    .block-title > h1 {
+        font-size: 8vw;
+    }
+
+    .block-title > p {
+        font-size: 4vw; 
+    }
+    
+    .block-title > .meta > a { 
+        font-size: 4vw;     
+    }
+
+    .sidebyside-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebyside-box {
+        width: 86%;
+        margin: 1% 0;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .console-text-own {
+        font-size: 2.5vw;
+    }
+
+    .downArrow {
+        font-size: 7vw;
+    }
+}
+
+/* Defining CSS Animation for downArrow */
+@keyframes arrowBobble {
+    from {
+      transform: translateY(2vh);
+    } 
+    to {
+      transform: translateY(-2vh);
+    }
+  }
+
+/* Applying CSS Animation on downArrow */
+@media (prefers-reduced-motion: no-preference) {
+    .downArrow {
+        animation: arrowBobble infinite 2.5s ease-in-out alternate;
+    }
 }
