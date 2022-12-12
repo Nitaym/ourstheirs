@@ -5,7 +5,7 @@
 body {
 	background: #FFF;
 	font-family: Georgia, Times New Roman, Times, serif;
-    font-size: 1.875rem;
+    font-size: 3vw;
 	text-align: center;
     margin: 0;
     padding: 0;
@@ -25,45 +25,45 @@ h1 {
 }
 
 h2 {
-	font-size: 4.375rem;
+	font-size: 6vw;
 	color: #FFB000;
     font-family: 'Cambria Math', Georgia, serif;
 	text-transform: lowercase;
 }
 
-h3 {
+/* h3 {
 	font-size: 2.5rem;
     margin-top: 40px;
 	text-transform: lowercase;
-}
+} */
 
 p {
-	margin: 40px auto;
+	margin: 1vh auto;
 	color: #000;
     line-height: 200%;
 }
 
-pre {
+/* pre {
     font-size: 1.125rem;
-	margin: 40px auto;
+	margin: 2vw auto;
 	color: #000;
     line-height: 200%;
 	
-}
+} */
 
 code {
-    font-size: 1.5rem;
+    font-size: 2.5vw;
     background-color: #000;
 	font-style: normal;
-    border-radius: 10px;
+    border-radius: 1vw;
     color: white;
-    padding: 5px 15px;
+    padding: 0.5vh 1vw;
     font-family: menlo, monospace;
 }
 
 a, a:visited {
 	color: #000;
-    font-size: 0.75rem;
+    font-size: 1vw;
     text-decoration: none;
 }
 
@@ -75,22 +75,22 @@ ul {
 	list-style: none;
 }
 
-.download {
+/* .download {
 	padding: 10px;
-}
+} */
 
 .downArrow {
     font-size: 3rem;
     color: black;
 }
 
-blockquote {
+/* blockquote {
 	text-align: left;
 	margin: 10px auto;
 	background: #C5C3DE;
 	border: solid 2px #69697A;
 	padding: 0 40px;
-}
+} */
 
 /*----------------------------------------  BLOCKS */
 
@@ -98,6 +98,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 
 	position: relative;
 	margin: 0;
@@ -128,11 +129,11 @@ blockquote {
 }
 
 .block-title > p {
-    font-size: 1.5rem;
+    font-size: 2vw;
 }
 
 .block-title > .meta > a {
-    font-size: 1.5rem;
+    font-size: 2vw;
 }
 
 .block-merge { background-color: #06406c; }
@@ -148,53 +149,59 @@ blockquote {
 .block-comments #disqus_thread { width: 600px; text-align: left; margin-left: auto; margin-right: auto; }
 */
 
-.announcement {
+/* .announcement {
     margin-bottom: 40px;
 }
 
 .announcement img {
     border-radius: 4px;
-}
-
+} */
+/* 
+.console {
+    margin: 1% 1%;
+} */
 
 .console-background {
 	max-width: 960px;
  	width: 80%;
-	margin: 40px auto;
+    padding: 2vw;
+	margin: 3vh 0;
+
 	text-align: left;
     background-color: black;
-    padding: 15px;
     border-radius: 10px;
 }
 
 .console-text-own {
-	font-size: 0.95rem;
+    font-size: 1.25vw;
 	color: rgb(255, 255, 255) !important;
-	line-height: 2.5rem;
-    color: rgb(255, 255, 255);
+	line-height: 3.5vw;
     font-family: Monospace;
-    margin: 00px 0px 0px 10px;
+    /* margin: 00px 0px 0px 10px; */
+    margin: 00px 0px 0px 1vh;
 }
+
 .console-text-git {
-    font-size: 1.875rem;
-    line-height: 2.5rem;
+    font-size: 2.5vw;
+    line-height: 3.3vw;
 	
     color: rgb(180, 180, 180) !important;
     font-family: Monospace;
-    margin: 00px 0px 0px 10px;
+    /* margin: 00px 0px 0px 10px; */
+    margin: 00px 0px 0px 1vw;
 }
 
-.console-textinput {
+/* .console-textinput {
     resize: none;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px 1% 1%;
     border: none;
     outline: none;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     font-family: Monospace;
-    width: calc(100% - 20px);
-    overflow: hidden;
-}
+    width: 99%;
+    overflow-wrap: normal;
+} */
 
 
 .sidebyside-container {
@@ -202,13 +209,17 @@ blockquote {
     flex-direction: row;
     justify-content: space-evenly;
     width: 90%;
-    margin: auto;
 }
 
 .sidebyside-box {
-    width: 45%;
-    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 46%;
     border-radius: 10px;
+    padding-bottom: 3vh;
 }
 
 .merge-highlight {
@@ -227,21 +238,17 @@ blockquote {
 }
 
 /* Media query for mobile view */
-@media only screen and (max-width: 1365px) and (min-height: 1441px) {
-    .scrollblock {
-        height: 100vh;
-    }
-    
+@media only screen and (max-width: 1150px) {
     .block-title > h1 {
-        font-size: 5rem;
+        font-size: 8vw;
     }
 
     .block-title > p {
-        font-size: 2.5rem; 
+        font-size: 4vw; 
     }
     
     .block-title > .meta > a { 
-        font-size: 2.5rem;     
+        font-size: 4vw;     
     }
 
     .sidebyside-container {
@@ -250,33 +257,33 @@ blockquote {
     }
 
     .sidebyside-box {
-        width: 89%;
-        margin: 1%;
-
+        width: 86%;
+        margin: 1% 0;
+        padding-bottom: 3vh;
     }
 
     .console-text-own {
-        font-size: 1.5rem;
+        font-size: 2.5vw;
     }
 
     .downArrow {
-        font-size: 5rem;
+        font-size: 7vw;
     }
 }
 
 /* Defining CSS Animation for downArrow */
-@keyframes example {
+@keyframes arrowBobble {
     from {
-      transform: translateY(2vw);
+      transform: translateY(2vh);
     } 
     to {
-      transform: translateY(-2vw);
+      transform: translateY(-2vh);
     }
   }
 
 /* Applying CSS Animation on downArrow */
 @media (prefers-reduced-motion: no-preference) {
     .downArrow {
-        animation: example infinite 2.5s ease-in-out alternate;
+        animation: arrowBobble infinite 2.5s ease-in-out alternate;
     }
 }
