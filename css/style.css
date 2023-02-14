@@ -113,6 +113,9 @@ blockquote {
 .block-rebase { background-color: #fff8c9; }
 .block-rebase h2 { color: #2d2700; }
 .block-rebase p { color: #615400; }
+.block-stash-pop { background-color: #06406c; }
+.block-stash-pop h2 { color: #FFF; }
+.block-stash-pop p { color: #FFF; }
 /*.block-comments { background-color: #FFF; padding-bottom: 50px; font-size: 14px; color: #000; }
 .block-comments h2 { color: #000; }
 .block-comments h3 { font-size: 16px; }

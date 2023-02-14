@@ -144,6 +144,53 @@
         </p>
 
     </div>
+
+    <div class="scrollblock block-stash-pop">
+        <h2>git stash pop</h2>
+        <p>
+            let's pop from the <code><span class="branch2">stash</span></code> on <code><span class="branch1">master</span></code><br/>
+            <div class="console-background">
+                <div class="console">
+                    <p class="console-text-own">
+                        $ git <span class="branch2">stash pop</span> <br>
+                    </p>
+                    <p class="console-text-git">
+                        Auto-merging test <br>
+                        CONFLICT (content): Merge conflict in codefile.js <br>
+                        ...
+                    </p>
+                </div>
+            </div>
+            <p>either fix the conflict manually by editing codefile.js, or use </p>
+
+            <div class="sidebyside-container">
+                <div class="sidebyside-one rebase-highlight">
+                    <div class="console-background">
+                        <div class="console">
+                            <p class="console-text-own">
+                                $ git checkout <span class="branch1">--ours</span> codefile.js
+                            </p>
+                        </div>
+                    </div>
+                    to select the changes done in <code><span class="branch1">master</span></code>
+                </div>
+                <div class="sidebyside-two rebase-highlight">
+                    <div class="console-background">
+                        <div class="console">
+                            <p class="console-text-own">
+                                $ git checkout <span class="branch2">--theirs</span> codefile.js
+                            </p>
+                        </div>
+                    </div>
+                    to select the changes done in the <code><span class="branch2">stash</span> </code>
+                </div>
+            </div>
+            <br>
+            <p> That's it! Note that codefile.js is <i>not committed</i></p>
+        </p>
+
+    </div>
+
 <!--     <a name="hints"></a>
     <div class="scrollblock block-hints">
         <h2>useful hints</h2>
